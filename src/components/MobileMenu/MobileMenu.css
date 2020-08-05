@@ -1,0 +1,25 @@
+div#mobile-menu {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+ul#mobile-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 0;
+}
+ul#mobile-menu li {
+  list-style-type: none;
+  text-align: center;
+  margin: 25px;
+}
+
+ul#mobile-menu li a {
+  text-decoration: none;
+  color: blue;
+  font-size: 2rem;
+  font-family: 'Helvetica';
+}

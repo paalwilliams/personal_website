@@ -1,0 +1,138 @@
+form#contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  margin: 5% auto;
+  animation: createBox 0.25s;
+}
+form#contactForm input[type='text'],
+form#contactForm input[type='textarea'] {
+  height: 50px;
+  border: 0;
+  font-size: 18px;
+  border-bottom: 1px solid lightgrey;
+}
+
+form#contactForm h1 {
+  color: blue;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 2rem;
+  margin: 0;
+}
+
+form#contactForm p {
+  color: white;
+  font-family: helvetica;
+  line-height: 1.3;
+  font-size: 1.3rem;
+  width: 90%;
+  margin: 15px auto;
+}
+
+form#contactForm input {
+  height: 50px;
+  border: 0;
+  font-size: 18px;
+  margin: 10px;
+  padding: 0 25px;
+}
+
+form#contactForm input[type='textarea'] {
+  height: 200px;
+}
+
+form#contactForm input[type='submit']:hover {
+  cursor: pointer;
+}
+
+p#closeit {
+  font-family: helvetica;
+  color: white;
+  text-align: right;
+  font-size: 2rem;
+  width: 20px;
+  position: absolute;
+  right: 25px;
+}
+
+p#closeit:hover {
+  cursor: pointer;
+  animation: hovering 0.25s;
+}
+
+div#contactBack {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 99999999999999999999;
+  background: linear-gradient(270deg, #06d49f, #ce53f6);
+  background-size: 400% 400%;
+
+  -webkit-animation: bgGradient 30s ease infinite;
+  -moz-animation: bgGradient 30s ease infinite;
+  animation: bgGradient 30s ease infinite;
+}
+
+@-webkit-keyframes bgGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes bgGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes bgGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes createBox {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  85% {
+    transform: scale 1.05;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hovering {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

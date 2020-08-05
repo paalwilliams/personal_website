@@ -1,0 +1,38 @@
+div.post-entry {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Helvetica;
+  border-bottom: 1px solid lightgrey;
+  padding: 25px 0;
+}
+div.post-entry h1 {
+  /* text-align: center; */
+  padding-left: 25px;
+}
+
+div.post-entry h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+div.post-entry h1 a:hover {
+  color: #444444;
+}
+
+div.post-entry img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+div.post-entry img:hover {
+  filter: brightness(1.1);
+}
+
+div.post-entry p.post-author {
+  width: 92%;
+  margin: 15px auto;
+  color: grey;
+}
