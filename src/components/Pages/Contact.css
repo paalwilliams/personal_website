@@ -67,7 +67,7 @@ div#contactBack {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 99999999999999999999;
+  padding-top: 100px;
   background: linear-gradient(270deg, #06d49f, #ce53f6);
   background-size: 400% 400%;
 

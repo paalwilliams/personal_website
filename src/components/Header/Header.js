@@ -25,7 +25,16 @@ const Header = () => {
             Contact
           </Link>
         </li>
-        <li>Resume</li>
+        <li>
+          <Link
+            to='/resume'
+            onClick={() => {
+              dispatch({ type: 'TOGGLE_RESUME' });
+            }}
+          >
+            Resume
+          </Link>
+        </li>
       </ul>
       <div
         className='hamburger'

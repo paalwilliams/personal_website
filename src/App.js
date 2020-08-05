@@ -10,6 +10,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import NoMatch from './components/Utils/NoMatch';
+import Resume from './components/Resume/Resume';
 import Post from './components/Posts/Post';
 import Posts from './components/Posts/Posts';
 import About from './components/Pages/About';
@@ -25,6 +26,7 @@ function App() {
       <Router>
         {state.hamburger ? <MobileMenu /> : ''}
         {state.contact ? <Contact /> : ''}
+        {state.resume ? <Resume /> : ''}
         <Header />
         <div id='page-body'>
           <Switch>

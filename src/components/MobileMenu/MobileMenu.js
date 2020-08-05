@@ -24,14 +24,7 @@ const MobileMenu = () => {
             Blog
           </Link>
         </li>
-        <li>
-          <Link
-            to='/resume'
-            onClick={() => dispatch({ type: 'TOGGLE_HAMBURGER' })}
-          >
-            Resume
-          </Link>
-        </li>
+
         <li>
           <Link
             to='/contact'
@@ -40,6 +33,16 @@ const MobileMenu = () => {
             }}
           >
             Contact
+          </Link>
+        </li>
+        <li>
+          <Link
+            to='/resume'
+            onClick={() => {
+              dispatch({ type: 'TOGGLE_RESUME' });
+            }}
+          >
+            Resume
           </Link>
         </li>
       </ul>

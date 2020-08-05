@@ -7,6 +7,7 @@ const initialState = {
   name: '',
   message: '',
   hamburger: false,
+  resume: false,
 };
 
 const reducer = (state, action) => {
@@ -31,6 +32,17 @@ const reducer = (state, action) => {
         ...state,
         hamburger: !state.hamburger,
       };
+    case 'TOGGLE_RESUME':
+      return {
+        ...state,
+        resume: !state.resume,
+      };
+    case 'CLOSE_RESUME': {
+      return {
+        ...state,
+        resume: false,
+      };
+    }
   }
 };
 

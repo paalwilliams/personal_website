@@ -8,7 +8,7 @@ const Posts = () => {
   let [posts, setPosts] = useState();
   useEffect(() => {
     axios
-      .get(`http://api.paaa.al/posts/`)
+      .get(`https://api.paaa.al/posts/`)
       .then((response) => {
         console.log(response);
         setPosts(response.data);

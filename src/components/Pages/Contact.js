@@ -13,6 +13,7 @@ const Contact = () => {
       });
     }
   });
+
   const sendEmail = (e) => {
     e.preventDefault();
     axios

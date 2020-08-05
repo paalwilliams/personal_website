@@ -19,12 +19,11 @@ const Post = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://api.paaa.al/posts/${num}`)
+      .get(`https://api.paaa.al/posts/${num}`)
       .then((response) => {
         setPost({
           post: response.data,
         });
-        console.log(response.data);
       })
       .catch((err) => {
         setPost({
@@ -33,7 +32,7 @@ const Post = (props) => {
         });
       })
       .finally(() => {
-        console.log('finished');
+        console.log('done');
       });
   }, []);
   if (post.error) {
@@ -43,18 +42,32 @@ const Post = (props) => {
     console.log('no post');
     return <Loading />;
   } else {
-    console.log('post');
     return (
       <div id='post'>
         <h1>{post.post.Title}</h1>
-        <p>
+        <p className='post-author'>
           by {post.post.created_by.firstname} {post.post.created_by.lastname}{' '}
         </p>
+        {post.post.headerimage ? (
+          <img
+            className='post-image'
+            src={`https://api.paaa.al${post.post.headerimage.url}`}
+            key={post.id}
+            alt=''
+          />
+        ) : (
+          ''
+        )}
+
         {post.post.Body.split('\n').map((i, key) => {
           if (i.length === 0) {
             return <br key={key} />;
           } else {
-            return <div key={key}>{i}</div>;
+            return (
+              <p className='post-body' key={key}>
+                {i}
+              </p>
+            );
           }
         })}
       </div>

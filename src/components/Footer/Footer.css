@@ -2,7 +2,6 @@ footer#footer {
   width: 100%;
   position: fixed;
   bottom: 0;
-  background-color: white;
   display: flex;
   justify-content: flex-end;
   padding: 25px 0;
