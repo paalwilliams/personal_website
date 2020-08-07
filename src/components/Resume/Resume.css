@@ -20,6 +20,13 @@ canvas.react-pdf__Page__canvas {
   box-shadow: 5px 5px 20px #222222;
 }
 
+canvas.react-pdf__Page__canvas:hover,
+.react-pdf__Page__textContent:hover,
+.react-pdf__Page__textContent *:hover,
+canvas.react-pdf__Page__canvas *:hover {
+  cursor: url('floppy.png') 0 0, pointer !important;
+}
+
 div.resumeNav {
   text-align: center;
   box-shadow: 2px 10px 10px lightgray;

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../Utils/Loading';
 import axios from 'axios';
+import marked from 'marked';
+import './About.css';
 
 const About = () => {
   let [about, setAbout] = useState();
@@ -9,6 +11,7 @@ const About = () => {
       .get('https://api.paaa.al/about')
       .then((response) => {
         setAbout(response.data);
+        console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
@@ -18,8 +21,8 @@ const About = () => {
     return <Loading />;
   } else {
     return (
-      <div>
-        <h1>{about.title}</h1>
+      <div class='about-body'>
+        <h1>{about.aboutitle}</h1>
         {about.aboutbody.split('\n').map((i, key) => {
           if (i.length === 0) {
             return <br key={key} />;

@@ -18,14 +18,14 @@ form#contactForm input[type='textarea'] {
 form#contactForm h1 {
   color: blue;
   text-align: center;
-  font-family: Helvetica;
+  font-family: 'Liberation Sans Bold';
   font-size: 2rem;
   margin: 0;
 }
 
 form#contactForm p {
   color: white;
-  font-family: helvetica;
+  font-family: 'Liberation Sans Bold';
   line-height: 1.3;
   font-size: 1.3rem;
   width: 90%;
@@ -49,7 +49,7 @@ form#contactForm input[type='submit']:hover {
 }
 
 p#closeit {
-  font-family: helvetica;
+  font-family: 'Liberation Sans Bold';
   color: white;
   text-align: right;
   font-size: 2rem;

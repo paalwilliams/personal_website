@@ -1,0 +1,10 @@
+p {
+  font-family: 'Liberation Sans Bold';
+}
+div.about-body {
+  font-size: 2rem;
+  font-family: 'Liberation Sans Bold';
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}

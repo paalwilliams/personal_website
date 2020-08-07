@@ -5,19 +5,29 @@ import { useStore } from '../../Context/store';
 
 const Header = () => {
   const { state, dispatch } = useStore();
+
+  const wiggleComingSoon = () => {
+    document.querySelector('.comingSoon small').textContent +=
+      ' (I said coming soon)';
+  };
   return (
     <header id='header'>
       <h1>
-        <Link to='/'>paaa.al</Link>
+        <Link to='/'>paaaaal</Link>
       </h1>
       <ul id='nav'>
-        <li>
+        {/* <li>
           <Link to='/about'>About</Link>
+        </li> */}
+        <li className='comingSoon' onClick={wiggleComingSoon}>
+          <Link>
+            <strike>
+              <em>Blog</em>
+            </strike>
+            <small>(coming soon)</small>
+          </Link>
         </li>
-        <li>
-          <Link to='/blog'>Blog</Link>
-        </li>
-        <li>
+        <li class='no'>
           <Link
             to='/contact'
             onClick={() => dispatch({ type: 'OPEN_CONTACT' })}

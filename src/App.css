@@ -2,3 +2,41 @@ div#page-body {
   padding: 25px;
   margin-bottom: 110px;
 }
+
+@font-face {
+  font-family: 'Apoc Dark Italic';
+  src: url('./fonts/AT\ Apoc\ Dark\ Italic.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Liberation Sans Bold';
+  src: url('./fonts/liberationsans-bold-webfont.woff2') format('woff2'),
+    url('./fonts/liberationsans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Liberation Sans Bold Italic';
+  src: url('./fonts/liberationsans-bolditalic-webfont.woff2') format('woff2'),
+    url('./fonts/liberationsans-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Liberation Sans Italic';
+  src: url('./fonts/liberationsans-italic-webfont.woff2') format('woff2'),
+    url('./fonts/liberationsans-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Liberation Sans';
+  src: url('./fonts/liberationsans-regular-webfont.woff2') format('woff2'),
+    url('./fonts/liberationsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

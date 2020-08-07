@@ -30,7 +30,7 @@ function App() {
         <Header />
         <div id='page-body'>
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' component={About} />
             <Route exact path='/blog/post/:id' component={Post} />
             <Route exact path='/blog' component={Posts}></Route>
             <Route exact path='/contact'></Route>

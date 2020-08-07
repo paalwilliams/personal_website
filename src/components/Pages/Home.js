@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Loading from '../Utils/Loading';
 import axios from 'axios';
+import './Home.css';
 
 const Home = () => {
   let [home, setHome] = useState();
@@ -24,7 +25,7 @@ const Home = () => {
     return <Loading />;
   } else {
     return (
-      <div>
+      <div className='home-body'>
         <h1>{home.title}</h1>
         {home.body.split('\n').map((i, key) => {
           if (i.length === 0) {
@@ -44,7 +45,11 @@ const Home = () => {
               <img alt={alt} key={alt} src={`https://api.paaa.al${img}`}></img>
             );
           } else {
-            return <div key={key}>{i}</div>;
+            return (
+              <div className='post-body' key={key}>
+                {i}
+              </div>
+            );
           }
         })}
       </div>

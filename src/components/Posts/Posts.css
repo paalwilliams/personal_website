@@ -2,7 +2,7 @@ div.post-entry {
   width: 80%;
   max-width: 800px;
   margin: 20px auto;
-  font-family: Helvetica;
+  font-family: 'Liberation Sans Bold';
   border-bottom: 1px solid lightgrey;
   padding: 25px 0;
 }
