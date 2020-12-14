@@ -10,7 +10,6 @@ const Posts = () => {
     axios
       .get(`https://api.paaa.al/posts/`)
       .then((response) => {
-        console.log(response);
         setPosts(response.data);
       })
       .catch((err) => {

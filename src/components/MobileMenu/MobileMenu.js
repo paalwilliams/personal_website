@@ -18,15 +18,6 @@ const MobileMenu = () => {
         </li>
         <li>
           <Link
-            to='/blog'
-            onClick={() => dispatch({ type: 'TOGGLE_HAMBURGER' })}
-          >
-            Blog
-          </Link>
-        </li>
-
-        <li>
-          <Link
             to='/contact'
             onClick={() => {
               dispatch({ type: 'OPEN_CONTACT' });

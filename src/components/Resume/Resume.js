@@ -33,7 +33,7 @@ const Resume = () => {
         X
       </p>
       <Document
-        file='https://api.paaa.al/uploads/williams_paal_resume_c6a025996e.pdf'
+        file='https://api.paaa.al/uploads/williams_paal_resume_882dcd225c.pdf'
         loading={Loading}
         onClick={downloadResume}
       >

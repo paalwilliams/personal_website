@@ -32,7 +32,6 @@ const Post = (props) => {
         });
       })
       .finally(() => {
-        console.log('done');
       });
   }, []);
   if (post.error) {

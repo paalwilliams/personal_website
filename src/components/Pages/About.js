@@ -11,7 +11,6 @@ const About = () => {
       .get('https://api.paaa.al/about')
       .then((response) => {
         setAbout(response.data);
-        console.log(response.data);
       })
       .catch((err) => {
         console.log(err);
