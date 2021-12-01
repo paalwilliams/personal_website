@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
 } from 'react-router-dom';
 import './App.css';
 
@@ -20,30 +20,30 @@ import { useStore } from './Context/store';
 import MobileMenu from './components/MobileMenu/MobileMenu';
 
 function App() {
-  const { state, dispatch } = useStore();
-  return (
-    <div className='App'>
-      <Router>
-        {state.hamburger ? <MobileMenu /> : ''}
-        {state.contact ? <Contact /> : ''}
-        {state.resume ? <Resume /> : ''}
-        <Header />
-        <div id='page-body'>
-          <Switch>
-            <Route exact path='/' component={About} />
-            <Route exact path='/blog/post/:id' component={Post} />
-            <Route exact path='/blog' component={Posts}></Route>
-            <Route exact path='/contact'></Route>
-            <Route exact path='/about' component={About} />
-            <Route>
-              <Redirect to='/' />
-            </Route>
-          </Switch>
+    const { state, dispatch } = useStore();
+    return (
+        <div className='App'>
+            <Router>
+                {state.hamburger ? <MobileMenu /> : ''}
+                {/* {state.contact ? <Contact /> : ''} */}
+                {state.resume ? <Resume /> : ''}
+                <Header />
+                <div id='page-body'>
+                    <Switch>
+                        <Route exact path='/' component={About} />
+                        <Route exact path='/blog/post/:id' component={Post} />
+                        <Route exact path='/blog' component={Posts}></Route>
+                        <Route exact path='/contact'></Route>
+                        <Route exact path='/about' component={About} />
+                        <Route>
+                            <Redirect to='/' />
+                        </Route>
+                    </Switch>
+                </div>
+                <Footer />
+            </Router>
         </div>
-        <Footer />
-      </Router>
-    </div>
-  );
+    );
 }
 
 export default App;

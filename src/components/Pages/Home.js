@@ -4,57 +4,36 @@ import axios from 'axios';
 import './Home.css';
 
 const Home = () => {
-  let [home, setHome] = useState();
-  useEffect(() => {
-    axios
-      .get('https://api.paaa.al/home')
-      .then((response) => {
-        setHome(response.data);
-        console.log(response.data);
-      })
-      .catch((err) => {
-        setHome({
-          error: 404,
-        });
-      })
-      .finally(() => {
-        console.log('finished');
-      });
-  }, []);
-  if (!home) {
-    return <Loading />;
-  } else {
-    return (
-      <div className='home-body'>
-        <h1>{home.title}</h1>
-        {home.body.split('\n').map((i, key) => {
-          if (i.length === 0) {
-            return <br key={key} />;
-          } else if (i[0] === '!') {
-            // Get alt text from
-            let b1 = i.indexOf('[');
-            let b2 = i.indexOf(']');
-            let alt = i.slice(b1 + 1, b2);
+    let [home, setHome] = useState();
+    useEffect(() => {
+        axios
+            .get('https://api.paaa.al/home')
+            .then((response) => {
+                setHome(response.data);
+                console.log(response.data);
+            })
+            .catch((err) => {
+                setHome({
+                    error: 404,
+                });
+            })
+            .finally(() => {
+                console.log('finished');
+            });
+    }, []);
+    if (!home) {
+        return <Loading />;
+    } else {
+        return (
+            <div className='home-body'>
+                <h1>Hi! I'm Paal.</h1>
+                <p>I'm a front-end web developer living and working in St. Louis, Missouri. I graduated from Lesley University in 2017 with a Bachelor's of Fine Art in photography and art history.
+                    Before transitioning my career, I worked in galleries and museums doing project management. My background in fine art and exhibition curation helps me to effectively distill complicated visual philosophies to user friendly design.
 
-            // Get img url
-            let p1 = i.indexOf('(');
-            let p2 = i.indexOf(')');
-            let img = i.slice(p1 + 1, p2);
-
-            return (
-              <img alt={alt} key={alt} src={`https://api.paaa.al${img}`}></img>
-            );
-          } else {
-            return (
-              <div className='post-body' key={key}>
-                {i}
-              </div>
-            );
-          }
-        })}
-      </div>
-    );
-  }
+                    Currently, I'm an Associate Applications Developer at Mercy. If you have questions about freelance or project work, please contact me.</p>
+            </div>
+        );
+    }
 };
 
 export default Home;
